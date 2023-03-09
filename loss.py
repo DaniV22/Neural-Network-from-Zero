@@ -3,8 +3,7 @@ import numpy as np
 class Loss:
 
     '''
-    A Class to calculate the data and regularization losses
-    given model output and ground truth values
+    A Class to calculate the losses given model output and true values
 
     METHODS:
 
@@ -78,6 +77,20 @@ class LossCategoricalCrossEntropy(Loss):
         self.gradient_inputs = -y_true / (previous_gradient * samples)
 
 class LossMeanSquaredError(Loss):
+    
+    '''
+    A class to calculate the Loss of the network using the Loss Mean Squared error, 
+    for regression, and to perform the backward pass.
+
+    ATTRIBUTES:
+
+        gradient_inputs : gradient with respect to inputs
+
+    METHODS:
+
+        forward :   performs a forward pass of the loss function
+        backward :  performs a backward pass of the loss function
+    '''
 
     def forward(self, y_pred, y_true):
 
