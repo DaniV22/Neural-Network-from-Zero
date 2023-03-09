@@ -4,7 +4,7 @@ import numpy as np
 class ActivationReLU:
 
     '''
-    A class to implement an Rectified Linear Unit activation function (ReLU)
+    A class to implement a Rectified Linear Unit activation function (ReLU)
 
     ATTRIBUTES :
 
